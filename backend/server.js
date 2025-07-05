@@ -7,7 +7,10 @@ const mongoose = require("mongoose");
 const app = express();
 
 const corsOptions = {
-	origin: process.env.FRONTEND_URL,
+	origin: [
+		"https://vibe-chat-seme555.vercel.app",
+		"https://vibe-chat-zeta.vercel.app"
+	],
 	methods: ["GET", "POST", "DELETE"],
 	allowedHeaders: ["Content-Type", "Authorization"],
 	credentials: true,
